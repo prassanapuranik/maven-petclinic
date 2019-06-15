@@ -30,7 +30,7 @@ def uploadSpec = """{
  ]
 }"""
 */
-pipeline {
+Pipeline {
  agent none
     stages {
       stage('SCM_Chekout') {
