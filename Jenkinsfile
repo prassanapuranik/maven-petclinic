@@ -69,8 +69,8 @@ pipeline {
 				  input('Deploy Package to Production?')
 				  notify('Deployment-to-Production')
 				}
-					sh 'wget http://35.228.115.235:8081/artifactory/petclinic/Helloworldwebapp.war'
-					sh 'cp ./Helloworldwebapp.war /opt/tomcat/webapps/'
+					sh 'wget http://35.228.115.235:8081/artifactory/petclinic/petclinic.war'
+					sh 'cp ./petclinic.war /opt/tomcat/webapps/'
 					sh '/opt/tomcat/bin/catalina.sh run'
 
             }
