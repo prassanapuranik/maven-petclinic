@@ -37,7 +37,7 @@ pipeline {
           agent { label "master" }
 			steps {
 			    script {
-					notify('build-started')
+					/*notify('build-started')*/
 				}
                 checkout([$class: 'GitSCM',
                     branches: [[name: '*/master']],
@@ -67,7 +67,7 @@ pipeline {
 			steps {
 			    script {
 				  input('Deploy Package to Production?')
-				  notify('Deployment-to-Production')
+				  /*notify('Deployment-to-Production')*/
 				}
 					sh 'wget http://35.228.115.235:8081/artifactory/petclinic/petclinic.war'
 					sh 'cp ./petclinic.war /opt/tomcat/webapps/'
